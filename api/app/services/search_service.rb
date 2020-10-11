@@ -8,7 +8,7 @@ class SearchService
     @search_term = search_term
   end
 
-  # Request the search engine page and parsed with nokogiri
+  # Request the search engine page and parse it with nokogiri
   def parsed_page
     page_html = HTTParty.get(engine_url + search_term,
                              headers: { 'User-Agent' => USER_AGENT })
